@@ -14,9 +14,14 @@ namespace PersonalSite.Controllers
             return View();
         }
 
-        public PartialViewResult Navbar()
+        public ActionResult Resume()
         {
-            return PartialView("Navbar");
+            return View();
         }
+
+        //public ActionResult GetResume()
+        //{
+            
+        //}
     }
 }
