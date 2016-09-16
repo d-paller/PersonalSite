@@ -1,4 +1,9 @@
-﻿
+﻿//Get Elevator code
+$.getScript("elevator.js-master/elevator.js", function () {
+
+})
+
+
 //Set page height to window height
 $(document).ready(function () {
     function setHeight() {

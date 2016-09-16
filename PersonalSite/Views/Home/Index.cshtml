@@ -21,5 +21,16 @@
 </div>
 
 <div id="elevator">
-
+    <button class="btn btn-default elevator-btn text-center">Back to the Top</button>
+    <script src="~/scripts/elevator.js"></script>
+    <script>
+        window.onload = function() {
+  var elevator = new Elevator({
+      element: document.querySelector('.elevator-btn'),
+    mainAudio: 'Audio/elevator.mp3',
+    endAudio: 'Audio/ding.mp3'
+  });
+}
+    elevator.elevate();
+    </script>
 </div>
