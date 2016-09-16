@@ -8,6 +8,7 @@ namespace PersonalSite.Controllers
 {
     public class HomeController : Controller
     {
+
         // GET: Home
         public ActionResult Index()
         {
@@ -18,10 +19,12 @@ namespace PersonalSite.Controllers
         {
             return View();
         }
-
-        //public ActionResult GetResume()
-        //{
             
-        //}
+
+        public ActionResult GetResume()
+        {
+            return File("~/ExtraFiles/Paller_David_Resume.docx", "application/docx", ("ResumePaller - " + 
+                DateTime.Now.ToShortDateString()));
+        }
     }
 }

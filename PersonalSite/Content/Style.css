@@ -1,1 +1,19 @@
-﻿
+﻿#home{
+    background-color:black;
+}
+
+#resume{
+    background-color:azure;
+} 
+
+#about{
+    background-color:cadetblue;
+}
+
+#contact{
+    background-color: darkgray;
+}
+
+.page-div{
+    padding: 20%;
+}

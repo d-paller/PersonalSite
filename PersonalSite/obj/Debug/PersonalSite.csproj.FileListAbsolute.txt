@@ -68,3 +68,4 @@ C:\Users\david.paller\Box Sync\David Paller\PersonalSite\PersonalSite\bin\Micros
 C:\Users\david.paller\Box Sync\David Paller\PersonalSite\PersonalSite\bin\Microsoft.IdentityModel.Tokens.dll
 C:\Users\david.paller\Box Sync\David Paller\PersonalSite\PersonalSite\bin\Microsoft.IdentityModel.Logging.xml
 C:\Users\david.paller\Box Sync\David Paller\PersonalSite\PersonalSite\bin\Microsoft.IdentityModel.Tokens.xml
+C:\Users\david.paller\Box Sync\David Paller\PersonalSite\PersonalSite\obj\Debug\PersonalSite.csprojResolveAssemblyReference.cache
