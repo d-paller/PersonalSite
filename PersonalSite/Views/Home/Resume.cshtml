@@ -1,8 +1,9 @@
-﻿<script>
+﻿@{ 
+    ViewBag.TitleExtension = " - Resume";
+}
 
-</script>
-
-
-<h4>Download Resume</h4>
-<br />
-@Html.ActionLink("Home", "GetResume", null, new { @class = "btn btn-default" })
+<div class="page-div">
+    <h4>Download Resume</h4>
+    <br />
+    @Html.ActionLink("Download As Word Doc", "GetResume", null, new { @class = "btn btn-default" })
+</div>

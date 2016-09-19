@@ -7,7 +7,7 @@ $.getScript("elevator.js-master/elevator.js", function () {
 //Set page height to window height
 $(document).ready(function () {
     function setHeight() {
-        windowHeight = $(window).innerHeight();
+        windowHeight = $(window).height();
         $('.page-div').css('min-height', windowHeight);
     };
     setHeight();

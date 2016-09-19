@@ -15,5 +15,6 @@
 }
 
 .page-div{
-    padding: 20%;
+    min-height:unset;
+    padding:10%;
 }

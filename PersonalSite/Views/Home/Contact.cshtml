@@ -1,5 +1,52 @@
-﻿
-<h1>Contact</h1>
-<h2><span class="glyphicon glyphicon-envelope" ></span> Email</h2>
+﻿@{
+    ViewBag.TitleExtension = " - Contact";
+}
+@model PersonalSite.Models.ContactModel
 
-<h1>TODO: Add contact form</h1>
+<div class="page-div">
+    <h1>Contact</h1>
+    @using (Html.BeginForm())
+    {
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h2><span class="glyphicon glyphicon-envelope"></span> Email</h2>
+            </div>
+
+            <div class="panel-body form-group">
+
+                <div class="row">
+                    @Html.ValidationSummary(true)
+                </div>
+
+                <div class="row">
+
+                    @foreach (var property in ViewData.ModelMetadata.Properties)
+                    {
+                        if (property.PropertyName != "Message")
+                        {
+
+                            <div class="col-md-4 form-group">
+                                <label>@(property.DisplayName ?? property.PropertyName)</label>
+                                @Html.TextBox(property.PropertyName, null, new { @class = "form-control" })
+                                @Html.ValidationMessage(property.PropertyName, new { @style = "color: red;" })
+                            </div>
+                        }
+                    }
+                </div>
+
+                <div>
+                    @Html.LabelFor(x => x.Message, "Message")
+                    @Html.TextAreaFor(x => x.Message, new { @class = "form-control", @style = "min-width: 100%;" })
+                    @Html.ValidationMessageFor(x=>x.Message, null, new { @style = "color: red;" })
+                </div>
+
+            </div>
+            <div class="panel-footer">
+                <input type="submit" value="Submit Message" class="btn btn-primary" />
+                <input type="reset" value="Clear Fields" class="btn btn-danger pull-right" />
+            </div>
+
+        </div>
+    }
+
+    </div>

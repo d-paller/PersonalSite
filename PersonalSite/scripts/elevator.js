@@ -28,8 +28,8 @@ var Elevator = function(options) {
     var elevating = false;
 
     var startCallback;
-    var mainAudio;
-    var endAudio;
+    var mainAudio = "Audio/elevator.mp3";
+    var endAudio = "Audio/ding.mp3";
     var endCallback;
 
     var that = this;
@@ -123,7 +123,7 @@ var Elevator = function(options) {
         requestAnimationFrame( animateLoop );
 
         // Start music!
-        if( mainAudio ) {
+        if (mainAudio) {
             mainAudio.play();
         }
 
