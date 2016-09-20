@@ -34,4 +34,34 @@ $(document).ready(
         $(window).resize(function () {
             setDim();
         });
-});
+    });
+
+// active menu animation
+
+$(document).ready(
+    function () {
+        function activeMenuAnimation() {
+            $('.active').hover(function(){$(this).toggleClass('menu-active')});
+            };
+
+            activeMenuAnimation();
+    });
+
+// Get Phone number and email
+$(document).ready(
+
+    function getPhone() {
+        $('#phone').click(function () {
+            alert("Phone number: (469)237-9635");
+        });
+    },//get phone
+
+    function getEmail(){
+        $('#email').click(function () {
+            alert("Email: dpaller94@gmail.com");
+        });
+    }//get email
+
+    );//ready
+    
+    

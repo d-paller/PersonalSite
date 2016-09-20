@@ -11,28 +11,41 @@
 
             <div class="collapse navbar-collapse" id="myNavbar">
                 <ul class="nav navbar-nav">
-                    <li @(ViewBag.pageName == "Home" ? "class = \"active\"" : "")>
+                    <li class=@(ViewBag.pageName == "Home" ? "\"active\"" : "")>
                         <a href="@Url.Action("Index", "Home")">Home</a>
                     </li>
 
-                    <li @(ViewBag.pageName == "Resume" ? "class = \"active\"" : "")>
+                    <li class=@(ViewBag.pageName == "Resume" ? "\"active\"" : "")>
                         <a href="@Url.Action("Resume", "Home")">Resume</a>
                     </li>
 
-                    <li @(ViewBag.pageName == "About" ? "class = \"active\"" : "")>
+                    <li class=@(ViewBag.pageName == "About" ? "\"active\"" : "")>
                         <a href="@Url.Action("About", "Home")">About</a>
                     </li>
 
-                    <li @(ViewBag.pageName == "Contact" ? "class = \"active\"" : "")>
+                    <li class=@(ViewBag.pageName == "Contact" ? "\"active\"" : "")>
                         <a href="@Url.Action("Contact", "Home")">Contact</a>
                     </li>
                 </ul>
 
-                <div>
-                    <a class="navbar-right" href="https://www.linkedin.com/in/davidpaller?trk=hp-identity-name" target="_blank">
-                        <img class="social-icon" src="~/Content/LinkedInIcon.png" alt="Linked in icon" />
-                    </a>
-                </div>
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="navIcon">
+                        <a href="https://www.linkedin.com/in/davidpaller?trk=hp-identity-name" target="_blank">
+                            <label>
+                                <img class="social-icon" src="~/Content/LinkedInIcon.png" alt="Linked in icon" />
+                            </label>
+                                LinkedIn
+                            </a>
+                    </li>
+
+                    <li class="navIcon" id="email">
+                        <a href="mailto:dpaller94@gmail.com"><span class="glyphicon glyphicon-envelope"></span> Email</a>
+                    </li>
+                    <li class="navIcon" id="phone">
+                        <a href="#" ><span class="glyphicon glyphicon-earphone"></span> Phone</a>
+                    </li>
+
+                </ul>
 
                         
              </div>

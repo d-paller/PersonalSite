@@ -20,16 +20,29 @@
 
 
 .download-btn{
-    
+    background-color: #2e6ea6
 }
 
 
 .social-icon {
-    height: 40px;
-    margin: 5px;
+    height: 15px;
+    margin-bottom: 4px;
 }
+
+.navIcon:hover{
+    -webkit-filter: grayscale(100%) brightness(-110%);
+}
+
 
 .pdfView{
     margin-left: 0px;
     margin-right: 0px;
+}
+
+.menu-active {
+    background-color: #2e6ea6;
+}
+
+.active{
+    background-color: #2e6ea6;
 }
