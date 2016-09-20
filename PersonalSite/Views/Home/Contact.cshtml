@@ -4,16 +4,15 @@
 }
 @model PersonalSite.Models.ContactModel
 
-<div class="page-div">
-    <h1>Contact</h1>
+<div class="page-div" id="contact">
     @using (Html.BeginForm())
     {
-        <div class="panel panel-default">
+        <div class="panel panel-default contact-panel">
             <div class="panel-heading">
-                <h2><span class="glyphicon glyphicon-envelope"></span> Email</h2>
+                <h2>Message</h2>
             </div>
 
-            <div class="panel-body form-group">
+            <div class="panel-body form-group ">
 
                 <div class="row">
                     @Html.ValidationSummary(true)
@@ -37,7 +36,7 @@
 
                 <div>
                     @Html.LabelFor(x => x.Message, "Message")
-                    @Html.TextAreaFor(x => x.Message, new { @class = "form-control", @style = "min-width: 100%;" })
+                    @Html.TextAreaFor(x => x.Message, new { @class = "form-control", @style = "min-width: 100%; height: 250px" })
                     @Html.ValidationMessageFor(x=>x.Message, null, new { @style = "color: red;" })
                 </div>
 

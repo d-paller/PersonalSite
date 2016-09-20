@@ -31,21 +31,19 @@ namespace PersonalSite.Controllers
             return PartialView("PdfResumePartial");
         }
 
-        public ActionResult About()
-        {
-            return View();
-        }
-
         public ActionResult Contact()
         {
                 return View();
         }
             
 
-        public ActionResult GetResume()
+        public ActionResult GetResumeWord()
         {
-            return File("~/ExtraFiles/Paller_David_Resume.docx", "application/docx", ("ResumePaller - " + 
-                DateTime.Now.ToShortDateString() + ".docx"));
+            return File("~/ExtraFiles/Paller_David_Resume.docx", "application/docx", ("Resume-Paller.docx"));
+        }
+        public ActionResult GetResumePdf()
+        {
+            return File("~/ExtraFiles/Paller_David_Resume.pdf", "application/pdf", ("Resume-Paller.pdf"));
         }
 
         [HttpPost]

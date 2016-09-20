@@ -1,32 +1,48 @@
 ﻿#home{
-    background-color:black;
+    background-color:cadetblue;
 }
 
 #resume{
     background-color:#525659;
 } 
 
-#about{
-    background-color:cadetblue;
-}
+
 
 #contact{
-    background-color: darkgray;
+    background-color: #3277b3;
 }
 
 .page-div{
     padding: 10%;
 }
 
+p{
+    text-align: center;
+    font-size: large;
+}
+
+.well{
+    box-shadow: inset 0px 0px 20px;
+    padding: 10%;
+    margin: auto;
+}
+
 
 .download-btn{
-    background-color: #2e6ea6
+    background-color: #28567e;
+    color: white;
+    //box-shadow: black 0px 5px 20px;
 }
 
 
 .social-icon {
-    height: 15px;
+    height: 17px;
     margin-bottom: 4px;
+}
+
+.git-icon{
+    -webkit-filter: invert() contrast(1%);
+    height: 17px;
 }
 
 .navIcon:hover{
@@ -45,4 +61,24 @@
 
 .active{
     background-color: #2e6ea6;
+}
+
+.navbar{
+    box-shadow: black 0px 5px 20px;
+}
+
+footer{
+    box-shadow: black 0px 0px 20px;
+}
+
+.contact-panel{
+    box-shadow: black 0px 0px 20px;
+    background-color: #ededed;
+    font-size:x-large;
+}
+
+#DPHead{
+    text-align:center;
+    font-size: 100px;
+    font-family:Rockwell;
 }

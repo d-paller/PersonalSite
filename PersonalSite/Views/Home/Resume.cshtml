@@ -13,6 +13,7 @@
 
     <div class="download-btn panel-footer ">
         <label><strong>Download Resume: </strong></label>
-        @Html.ActionLink("Download As Word Doc", "GetResume", null, new { @class = "btn btn-primary" })
+        @Html.ActionLink("Download As Word Doc", "GetResumeWord", null, new { @class = "btn btn-primary" })
+        @Html.ActionLink("Download As PDF", "GetResumePdf", null, new { @class = "btn btn-primary" })
     </div>
 </div>

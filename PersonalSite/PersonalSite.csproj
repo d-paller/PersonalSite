@@ -146,6 +146,7 @@
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\GitHubIcon.png" />
     <Content Include="Content\LinkedInIcon.png" />
     <Content Include="Content\Style.css" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
@@ -204,7 +205,6 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="scripts\jquery-3.1.0.slim.min.map" />
     <Content Include="scripts\jquery-3.1.0.min.map" />
-    <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="scripts\package.json" />
     <Content Include="Views\Home\Contact\MessageSent.cshtml" />
