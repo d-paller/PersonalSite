@@ -3,7 +3,7 @@
 }
 
 #resume{
-    background-color:azure;
+    background-color:#525659;
 } 
 
 #about{
@@ -15,6 +15,21 @@
 }
 
 .page-div{
-    min-height:unset;
-    padding:10%;
+    padding: 10%;
+}
+
+
+.download-btn{
+    
+}
+
+
+.social-icon {
+    height: 40px;
+    margin: 5px;
+}
+
+.pdfView{
+    margin-left: 0px;
+    margin-right: 0px;
 }

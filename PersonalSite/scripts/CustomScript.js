@@ -1,15 +1,12 @@
-﻿//Get Elevator code
-$.getScript("elevator.js-master/elevator.js", function () {
-
-})
-
-
-//Set page height to window height
+﻿//Set page height to window height
 $(document).ready(function () {
     function setHeight() {
         windowHeight = $(window).height();
-        $('.page-div').css('min-height', windowHeight);
+        $('.page-div').css('min-height', windowHeight - $('.footer').height());
+        //window.alert("Window Height is " + windowHeight
+        //    + "\nThe ");
     };
+    
     setHeight();
 
     $(window).resize(function () {
@@ -17,16 +14,24 @@ $(document).ready(function () {
     });
 });
 
-//set top page margin to height of navbar
 
-$(document).ready(function () {
-    function setMargin() {
-        navbarHeight = $('.navbar').height();
-        $('.page-div').css('padding-top', navbarHeight + 15);
-    };
-    setMargin();
+// Set pdf view to Height and Width of page
 
-    $('.navbar').resize(function () {
-        setHeight();
-    });
+$(document).ready(
+    function () {
+        function setDim() {
+            var pageHeight = $(window).height();
+            $('#resume').css('min-height', pageHeight - $('.footer').height());
+
+            var pageWidth = $(window).width();
+            $('.pdfView').css('min-width', pageWidth);
+
+            $('.pdfView').css('min-height', $('#resume').height() - $('.download-btn').height() - $('.footer').height());
+        };
+
+        setDim();
+
+        $(window).resize(function () {
+            setDim();
+        });
 });

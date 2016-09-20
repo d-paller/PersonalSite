@@ -6,6 +6,9 @@ using System.Web.Mvc;
 using System.Net.Mail;
 using PersonalSite.Models;
 using System.Text;
+using Microsoft.Office;
+using Microsoft.Office.Interop.Word;
+using System.IO;
 
 namespace PersonalSite.Controllers
 {
@@ -21,6 +24,11 @@ namespace PersonalSite.Controllers
         public ActionResult Resume()
         {
             return View();
+        }
+
+        public PartialViewResult PdfResumePartial()
+        {
+            return PartialView("PdfResumePartial");
         }
 
         public ActionResult About()
@@ -48,7 +56,7 @@ namespace PersonalSite.Controllers
                 try
                 {
                     // Setup
-                    MailMessage msg = new MailMessage();
+                    System.Net.Mail.MailMessage msg = new System.Net.Mail.MailMessage();
                     SmtpClient smtp = new SmtpClient();
                     MailAddress from = new MailAddress(c.Email.ToString());
                     StringBuilder sb = new StringBuilder();

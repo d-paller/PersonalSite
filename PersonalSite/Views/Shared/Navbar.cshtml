@@ -6,16 +6,35 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#">David Paller</a>
+                <span class="navbar-brand">David Paller</span>
             </div>
 
             <div class="collapse navbar-collapse" id="myNavbar">
                 <ul class="nav navbar-nav">
-                    <li class="active"><a href="@Url.Action("Index", "Home")">Home</a></li>
-                    <li><a href="@Url.Action("Resume", "Home")">Resume</a></li>
-                    <li><a href="@Url.Action("About", "Home")">About</a></li>
-                    <li><a href="@Url.Action("Contact", "Home")">Contact</a></li>
+                    <li @(ViewBag.pageName == "Home" ? "class = \"active\"" : "")>
+                        <a href="@Url.Action("Index", "Home")">Home</a>
+                    </li>
+
+                    <li @(ViewBag.pageName == "Resume" ? "class = \"active\"" : "")>
+                        <a href="@Url.Action("Resume", "Home")">Resume</a>
+                    </li>
+
+                    <li @(ViewBag.pageName == "About" ? "class = \"active\"" : "")>
+                        <a href="@Url.Action("About", "Home")">About</a>
+                    </li>
+
+                    <li @(ViewBag.pageName == "Contact" ? "class = \"active\"" : "")>
+                        <a href="@Url.Action("Contact", "Home")">Contact</a>
+                    </li>
                 </ul>
-            </div>
+
+                <div>
+                    <a class="navbar-right" href="https://www.linkedin.com/in/davidpaller?trk=hp-identity-name" target="_blank">
+                        <img class="social-icon" src="~/Content/LinkedInIcon.png" alt="Linked in icon" />
+                    </a>
+                </div>
+
+                        
+             </div>
         </div>
     </nav>
