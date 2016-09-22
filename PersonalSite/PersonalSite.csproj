@@ -225,6 +225,10 @@
     <Content Include="Views\Home\Contact\MessageSent.cshtml" />
     <Content Include="Views\Home\Contact\Error.cshtml" />
     <Content Include="Views\Home\Resume\PdfResumePartial.cshtml" />
+    <Content Include="Views\Error\GeneralError.cshtml" />
+    <None Include="Views\Error\Http404.cshtml" />
+    <Content Include="Views\Error\Http500.cshtml" />
+    <Content Include="Views\Shared\_ErrorLayout.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -234,7 +238,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Views\Error\" />
   </ItemGroup>
   <ItemGroup>
     <COMReference Include="Microsoft.Office.Core">

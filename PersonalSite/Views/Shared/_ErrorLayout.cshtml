@@ -1,0 +1,47 @@
+﻿@using System.Web.Optimization
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Error</title>
+    @Styles.Render("~/Content/bootstrap.css", "~/Content/bootstrap-theme.css", "~/Content/Style.css")
+</head>
+
+
+<body>
+    <div class="page-div error-page text-center">
+        <div class="well">
+            <h1 style="font-size: 50px;">@ViewBag.errorType</h1>
+            <p>@ViewBag.errorMessage</p>
+
+            @Html.ActionLink("Go Home", "Index", "Home", null, new { @class = "btn btn-primary" })
+        </div>
+
+        @RenderBody()
+    </div>
+
+
+
+
+
+    @Scripts.Render("~/bundles/jquery")
+
+    <script type="text/javascript">
+        //load jquery if CDN fails
+        if (typeof jquery == undefined) {
+            var e = document.createElement('script');
+            e.src = '@Url.Content("~/Scripts/jquery-{version}.js")';
+            e.type = 'text/javascript';
+            document.getElementsByTagName("head")[0].appendChild(e);
+        }
+    </script>
+
+    @Scripts.Render("~/bundles/bootstrap")
+
+    @Scripts.Render("~/bundles/modernizer")
+
+    @Scripts.Render("~/bundles/javascript")
+
+</body>
+</html>

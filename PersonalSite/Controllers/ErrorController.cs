@@ -6,19 +6,22 @@ using System.Web.Mvc;
 
 namespace PersonalSite.Controllers
 {
-    public abstract class BaseController : Controller
+    public class ErrorController : Controller
     {
         // GET: Error
-        protected ActionResult Http404(string errorMessage)
+        public ActionResult Http404()
         {
-            Response.StatusCode = 400;
-            return View(errorMessage);
+            return View();
         }
 
-        protected ActionResult Http500(string errorMessage)
+        public ActionResult Http500()
         {
-            Response.StatusCode = 500;
-            return View(errorMessage);
+            return View();
+        }
+
+        public ActionResult GeneralError()
+        {
+            return View();
         }
     }
 }
