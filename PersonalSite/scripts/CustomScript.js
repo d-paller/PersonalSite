@@ -12,7 +12,7 @@ $(document).ready(function () {
     $(window).resize(function () {
         setHeight();
     });
-});
+}());
 
 
 // Set pdf view to Height and Width of page
@@ -34,18 +34,19 @@ $(document).ready(
         $(window).resize(function () {
             setDim();
         });
-    });
+    }());
 
-// active menu animation
+// .active menu animation
+// NOT IMPLIMENTED CORRECTLY
 
-$(document).ready(
-    function () {
-        function activeMenuAnimation() {
-            $('.active').hover(function(){$(this).toggleClass('menu-active')});
-            };
+//$(document).ready(
+//    function () {
+//        function activeMenuAnimation() {
+//            $('.active').hover(function(){$(this).toggleClass('menu-active')});
+//            };
+//            activeMenuAnimation();
+//    }());
 
-            activeMenuAnimation();
-    });
 
 // Get Phone number and email
 $(document).ready(
@@ -54,13 +55,13 @@ $(document).ready(
         $('#phone').click(function () {
             alert("Phone number: (469)237-9635");
         });
-    },//get phone
+    }(),//get phone
 
     function getEmail(){
         $('#email').click(function () {
             alert("Email: dpaller94@gmail.com");
         });
-    }//get email
+    }()//get email
 
     );//ready
     

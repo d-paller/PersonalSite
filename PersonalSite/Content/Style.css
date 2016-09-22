@@ -37,12 +37,13 @@ p{
 
 .social-icon {
     height: 17px;
-    margin-bottom: 4px;
+
 }
 
 .git-icon{
     -webkit-filter: invert() contrast(1%);
     height: 17px;
+
 }
 
 .navIcon:hover{

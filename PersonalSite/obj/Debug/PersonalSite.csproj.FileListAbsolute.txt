@@ -70,3 +70,8 @@ C:\Users\david.paller\Box Sync\David Paller\PersonalSite\PersonalSite\bin\Micros
 C:\Users\david.paller\Box Sync\David Paller\PersonalSite\PersonalSite\bin\Microsoft.IdentityModel.Tokens.xml
 C:\Users\david.paller\Box Sync\David Paller\PersonalSite\PersonalSite\obj\Debug\PersonalSite.csprojResolveAssemblyReference.cache
 C:\Users\david.paller\Box Sync\David Paller\PersonalSite\PersonalSite\obj\Debug\PersonalSite.csproj.ResolveComReference.cache
+C:\Users\david.paller\Box Sync\David Paller\PersonalSite\PersonalSite\bin\Antlr3.Runtime.dll
+C:\Users\david.paller\Box Sync\David Paller\PersonalSite\PersonalSite\bin\System.Web.Optimization.dll
+C:\Users\david.paller\Box Sync\David Paller\PersonalSite\PersonalSite\bin\WebGrease.dll
+C:\Users\david.paller\Box Sync\David Paller\PersonalSite\PersonalSite\bin\Antlr3.Runtime.pdb
+C:\Users\david.paller\Box Sync\David Paller\PersonalSite\PersonalSite\bin\System.Web.Optimization.xml
