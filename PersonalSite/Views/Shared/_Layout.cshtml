@@ -8,13 +8,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@ViewBag.Title </title>
 
+    <link rel="stylesheet" type="text/css" href="~/Content/Style.scss" />
     @* Does this use the CDNs??? *@
-    @Styles.Render("~/Content/bootstrap.css", "~/Content/bootstrap-theme.css", "~/Content/Style.css")
-    @*
-        <link href="~/Content/bootstrap.css" rel="stylesheet" />
-        <link href="~/Content/bootstrap-theme.css" rel="stylesheet" />
-        <link href="~/Content/Style.css" rel="stylesheet"  />
-    *@
+    @Styles.Render("~/Content/bootstrap.css", "~/Content/bootstrap-theme.css", "~/Content/Style.less")
+    @Scripts.Render("~/Scripts/Tracking.js") @* Tracking must begin at the beginning of the page load. *@
+    
 
 </head>
 

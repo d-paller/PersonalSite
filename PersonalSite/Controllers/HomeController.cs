@@ -70,6 +70,7 @@ namespace PersonalSite.Controllers
                     smtp.Port = 587;
                     smtp.EnableSsl = true;
                     smtp.DeliveryMethod = SmtpDeliveryMethod.Network;
+                    // There is currently no password included and will therfore always have an error.
                     smtp.Credentials = new System.Net.NetworkCredential("dpaller94@gmail.com", "Password");
 
                     // Build the email body
@@ -88,8 +89,8 @@ namespace PersonalSite.Controllers
 
                 } catch (Exception) // If an excpetion is thrown, send the error view
                 {
-                    // return View("Contact/Error");
-                    return View("Contact/MessageSent");  //For testing
+                     return View("Contact/Error");
+                    //return View("Contact/MessageSent");  //For testing
                 }
             }
             //if the form is not valid, return the same (current) view

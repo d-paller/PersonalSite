@@ -11,16 +11,17 @@
 
             <div class="collapse navbar-collapse" id="myNavbar">
                 <ul class="nav navbar-nav">
-                    <li class=@(ViewBag.pageName == "Home" ? "\"active\"" : "")>
-                        <a href="@Url.Action("Index", "Home")">Home</a>
+                    <li @(ViewBag.pageName == "Home" ? "class=active" : "")>
+                        <a class="menu-item" href="@Url.Action("Index", "Home")">Home</a>
                     </li>
 
-                    <li class=@(ViewBag.pageName == "Resume" ? "\"active\"" : "")>
-                        <a href="@Url.Action("Resume", "Home")">Resume</a>
+                    <li onclick="ga('send', 'event', 'Button-Clicks', 'Resume', 'Resume-View')" 
+                        @(ViewBag.pageName == "Resume" ? "class=active" : "")>
+                        <a class="menu-item" href="@Url.Action("Resume", "Home")">Resume</a>
                     </li>
 
-                    <li class=@(ViewBag.pageName == "Contact" ? "\"active\"" : "")>
-                        <a href="@Url.Action("Contact", "Home")">Contact</a>
+                    <li @(ViewBag.pageName == "Contact" ? "class=active" : "")>
+                        <a class="menu-item" href="@Url.Action("Contact", "Home")">Contact</a>
                     </li>
                 </ul>
 
@@ -39,7 +40,7 @@
                     </li>
 
                     <li class="navIcon" id="email">
-                        <a href="mailto:dpaller94@gmail.com"><span class="glyphicon glyphicon-envelope"></span> Email</a>
+                        <a href="#"><span class="glyphicon glyphicon-envelope"></span> Email</a>
                     </li>
                     <li class="navIcon" id="phone">
                         <a href="#" ><span class="glyphicon glyphicon-earphone"></span> Phone</a>
