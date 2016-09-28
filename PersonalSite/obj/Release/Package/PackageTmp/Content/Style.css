@@ -60,13 +60,10 @@ p{
     background-color: #2e6ea6;
 }
 
-.active{
-    background-color: #2e6ea6;
+.navbar{
+    box-shadow: black 0px 5px 20px;    
 }
 
-.navbar{
-    box-shadow: black 0px 5px 20px;
-}
 
 footer{
     box-shadow: black 0px 0px 20px;

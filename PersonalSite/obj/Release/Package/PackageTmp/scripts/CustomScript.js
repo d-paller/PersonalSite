@@ -39,13 +39,7 @@ $(document).ready(
 // .active menu animation
 // NOT IMPLIMENTED CORRECTLY
 
-//$(document).ready(
-//    function () {
-//        function activeMenuAnimation() {
-//            $('.active').hover(function(){$(this).toggleClass('menu-active')});
-//            };
-//            activeMenuAnimation();
-//    }());
+
 
 
 // Get Phone number and email

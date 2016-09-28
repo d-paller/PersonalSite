@@ -61,14 +61,7 @@ p{
 }
 
 .navbar{
-    box-shadow: black 0px 5px 20px;
-    li{
-
-        a:hover{
-                background-color: #2e6ea6;
-            }
-    }
-    
+    box-shadow: black 0px 5px 20px;    
 }
 
 

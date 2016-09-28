@@ -250,7 +250,7 @@
     <Content Include="Content\bootstrap\mixins\_border-radius.scss" />
     <Content Include="Content\bootstrap\mixins\_background-variant.scss" />
     <Content Include="Content\bootstrap\mixins\_alerts.scss" />
-    <None Include="Content\Style.less" />
+    <Content Include="Content\Style.css" />
     <None Include="Properties\PublishProfiles\DavidPaller.pubxml" />
     <None Include="scripts\jquery-3.1.0.intellisense.js" />
     <Content Include="scripts\Audio\ding.mp3" />
