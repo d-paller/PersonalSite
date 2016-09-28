@@ -161,10 +161,9 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\GitHubIcon.png" />
     <Content Include="Content\LinkedInIcon.png" />
-    <Content Include="Content\Suspension_bridge_icon.svg.png" />
+    <Content Include="Content\Suspension_bridge_icon.png" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
-    <Content Include="Index.html" />
     <Content Include="scripts\ai.0.22.19-build00125.js" />
     <Content Include="scripts\ai.0.22.19-build00125.min.js" />
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
@@ -250,7 +249,7 @@
     <Content Include="Content\bootstrap\mixins\_border-radius.scss" />
     <Content Include="Content\bootstrap\mixins\_background-variant.scss" />
     <Content Include="Content\bootstrap\mixins\_alerts.scss" />
-    <None Include="Content\Style.less" />
+    <Content Include="Content\Style.less" />
     <None Include="Properties\PublishProfiles\DavidPaller.pubxml" />
     <None Include="scripts\jquery-3.1.0.intellisense.js" />
     <Content Include="scripts\Audio\ding.mp3" />
@@ -292,6 +291,7 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\ContactModel.cs" />
+    <Compile Include="Models\Email.cs" />
     <Compile Include="Models\Resume.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -309,7 +309,7 @@
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="scripts\package.json" />
     <Content Include="Views\Home\Contact\MessageSent.cshtml" />
-    <Content Include="Views\Home\Contact\Error.cshtml" />
+    <Content Include="Views\Home\Contact\ContactError.cshtml" />
     <Content Include="Views\Home\Resume\PdfResumePartial.cshtml" />
     <Content Include="Views\Error\GeneralError.cshtml" />
     <None Include="Views\Error\Http404.cshtml" />

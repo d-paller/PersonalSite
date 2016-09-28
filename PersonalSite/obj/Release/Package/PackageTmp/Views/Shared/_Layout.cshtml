@@ -9,9 +9,9 @@
     <title>@ViewBag.Title </title>
 
     @* Does this use the CDNs??? *@
-    @Styles.Render("~/Content/bootstrap.css", "~/Content/bootstrap-theme.css", "~/Content/Style.css")
-    @Scripts.Render("~/Scripts/Tracking.js") @* Tracking must begin at the beginning of the page load. *@
-    
+    @Styles.Render("~/Content/bootstrap.css", "~/Content/bootstrap-theme.css", "~/Content/Style.less")
+    @Scripts.Render("~/Scripts/Tracking.js") 
+
 
 </head>
 
@@ -19,17 +19,20 @@
 
     @Html.Partial("Navbar")
 
-    @RenderBody()
+    
+        @RenderBody()
+
+   
 
     @Html.Partial("Footer")
 
 
-    @* Scripts and Styles --------------------------------- *@
+    @* Scripts --------------------------------- *@
 
     @*<script src="~/scripts/jquery-3.1.0.js"></script>*@
-    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/scripts/jquery-3.1.0.min.js")
 
-    <script type="text/javascript">
+    @*<script type="text/javascript">
         //load jquery if CDN fails
         if (typeof jquery == undefined) {
             var e = document.createElement('script');
@@ -37,16 +40,16 @@
             e.type = 'text/javascript';
             document.getElementsByTagName("head")[0].appendChild(e);
         }
-    </script>
+    </script>*@
+    @*<script src="~/Scripts/modernizr-2.6.2.js"></script>*@
+    @Scripts.Render("~/scripts/modernizr-2.8.3.js")
 
     @*<script src="~/Scripts/bootstrap.min.js"></script>*@
-    @Scripts.Render("~/bundles/bootstrap")
+    @Scripts.Render("~/scripts/bootstrap.min.js")
 
-    @*<script src="~/Scripts/modernizr-2.6.2.js"></script>*@
-    @Scripts.Render("~/bundles/modernizer")
 
     @*<script src="~/scripts/CustomScript.js"></script>*@
-    @Scripts.Render("~/bundles/javascript")
+    @Scripts.Render("~/scripts/CustomScript.js")
 
 
     @RenderSection("scripts", required: false)

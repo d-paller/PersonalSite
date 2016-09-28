@@ -23,5 +23,10 @@ namespace PersonalSite.Controllers
         {
             return View();
         }
+
+        public ActionResult ContactError()
+        {
+            return View();
+        }
     }
 }

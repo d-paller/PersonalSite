@@ -1,4 +1,11 @@
-﻿#home{
+﻿
+
+body{
+    height: 100%;
+    
+}
+
+#home{
     background-color:cadetblue;
 }
 
@@ -14,6 +21,7 @@
 
 .page-div{
     padding: 10%;
+    height:100vh;
 }
 
 p{
@@ -31,6 +39,9 @@ p{
 .download-btn{
     background-color: #28567e;
     color: white;
+    position: fixed;
+    width: 100vw;
+    bottom: 38px;
 
 }
 
@@ -54,6 +65,8 @@ p{
 .pdfView{
     margin-left: 0px;
     margin-right: 0px;
+    min-height: 100vh;
+    min-width: 100vw;
 }
 
 .menu-active {
@@ -61,19 +74,13 @@ p{
 }
 
 .navbar{
-    box-shadow: black 0px 5px 20px;
-    li{
-
-        a:hover{
-                background-color: #2e6ea6;
-            }
-    }
-    
+    box-shadow: black 0px 5px 20px;    
 }
 
 
 footer{
     box-shadow: black 0px 0px 20px;
+    background-color: #f9f9f9;
 }
 
 .contact-panel{
@@ -90,5 +97,16 @@ footer{
 
 .error-page{
     background-color: #5e0000;
-    height: 100%;
+}
+
+#hidden-box{
+    display: none;
+    background-color: white;
+    border-bottom: black solid 3px;
+    box-shadow: black 5px 5px 10px;
+    margin-top: 56px;
+    margin-right: 5px;
+    width: auto;
+    padding: 15px;
+    float: right;
 }

@@ -50,57 +50,28 @@ namespace PersonalSite.Controllers
         [HttpPost]
         public ActionResult Contact(ContactModel c)
         {
-            if (ModelState.IsValid)  //Al lfields are valid
+            if (ModelState.IsValid)  //All fields are valid
             {
                 try
                 {
-                    // Setup
-                    System.Net.Mail.MailMessage msg = new System.Net.Mail.MailMessage();
-                    SmtpClient smtp = new SmtpClient();
-                    MailAddress from = new MailAddress(c.Email.ToString());
-                    StringBuilder sb = new StringBuilder();
-
-                    // Setup message details
-                    msg.To.Add("dpaller94@gmail.com");
-                    msg.Subject = "Contact Me";
-                    msg.IsBodyHtml = false;
-
-                    // Setup SMTP 
-                    smtp.Host = "smtp.gmail.com";
-                    smtp.Port = 587;
-                    smtp.EnableSsl = true;
-                    smtp.DeliveryMethod = SmtpDeliveryMethod.Network;
-                    // There is currently no password included and will therfore always have an error.
-                    smtp.Credentials = new System.Net.NetworkCredential("dpaller94@gmail.com", "Password");
-
-                    // Build the email body
-                    sb.Append("Name: " + c.FirstName + " " + c.LastName + Environment.NewLine);
-                    sb.Append("Email: " + c.Email + Environment.NewLine);
-                    sb.Append("Message: " + c.Message);
-
-                    msg.Body = sb.ToString();
-
-                    // Send message
-                    smtp.Send(msg);
-                    msg.Dispose();
-
-                    // Return the sucess view
-                    return View("Contact/MessageSent");
-
-                } catch (Exception) // If an excpetion is thrown, send the error view
+                    if (Models.Email.sendEmail(c) == true)
+                    {
+                        return View("Contact/MessageSent");
+                    }
+                }
+                catch (Exception) // If an excpetion is thrown, send the error view
                 {
-                     return View("Contact/Error");
-                    //return View("Contact/MessageSent");  //For testing
+                    return View("Contact/ContactError");
+                //return View("Contact/MessageSent");  //For testing
                 }
             }
             //if the form is not valid, return the same (current) view
             return View();
-        } // Contact
 
-        //public ActionResult err400()
-        //{
-        //    if ()
-        //}
+        }// Contact 
 
-    } // Controller
+        
+
+
+            } // Controller
 } // Namespace

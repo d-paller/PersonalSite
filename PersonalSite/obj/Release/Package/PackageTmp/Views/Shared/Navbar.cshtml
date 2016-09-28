@@ -6,21 +6,21 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <span class="navbar-brand">David Paller</span>
+                <span class="navbar-brand" ondblclick="SecretPage()">David Paller</span>
             </div>
 
             <div class="collapse navbar-collapse" id="myNavbar">
                 <ul class="nav navbar-nav">
-                    <li class=@(ViewBag.pageName == "Home" ? "\"active\"" : "")>
-                        <a href="@Url.Action("Index", "Home")">Home</a>
+                    <li @(ViewBag.pageName == "Home" ? "class=active" : "")>
+                        <a class="menu-item" href="@Url.Action("Index", "Home")">Home</a>
                     </li>
 
-                    <li onclick="ga('send', 'event', 'Button-Clicks', 'Resume', 'Resume-View')" class=@(ViewBag.pageName == "Resume" ? "\"active\"" : "")>
-                        <a href="@Url.Action("Resume", "Home")">Resume</a>
+                    <li @(ViewBag.pageName == "Resume" ? "class=active" : "")>
+                        <a id="resume-btn" class="menu-item" href="@Url.Action("Resume", "Home")">Resume</a>
                     </li>
 
-                    <li class=@(ViewBag.pageName == "Contact" ? "\"active\"" : "")>
-                        <a href="@Url.Action("Contact", "Home")">Contact</a>
+                    <li @(ViewBag.pageName == "Contact" ? "class=active" : "")>
+                        <a class="menu-item" href="@Url.Action("Contact", "Home")">Contact</a>
                     </li>
                 </ul>
 
@@ -32,22 +32,26 @@
                             </label> LinkedIn</a>
                     </li>
 
-                    <li class="navIcon git-icon">
+                    <li class="navIcon">
                         <a href="https://github.com/d-paller" target="_blank"><label>
                             <img class="social-icon " src="~/Content/GitHubIcon.png" alt="GitHub Icon" />
                             </label> GitHub </a>
                     </li>
 
-                    <li class="navIcon" id="email">
+                    <li class="navIcon " id="email">
                         <a href="#"><span class="glyphicon glyphicon-envelope"></span> Email</a>
                     </li>
                     <li class="navIcon" id="phone">
                         <a href="#" ><span class="glyphicon glyphicon-earphone"></span> Phone</a>
                     </li>
 
-                </ul>
-
-                        
+                </ul>                        
              </div>
         </div>
     </nav>
+
+
+<div id="hidden-box" class="text-center">
+    <p id="hidden-content"></p>
+    <a id="hide-btn" class="btn btn-sm btn-default" href="#">Hide</a>
+</div>
